@@ -3,11 +3,11 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
-REQUEST_STATUS = ((0, 'Pending'), (1, 'Approved'), (3, 'Denied'))
+REQUEST_STATUS = ((0, 'Pending'), (1, 'Approved'), (2, 'Denied'))
 
 
 class Booking(models.Model):
-    name = User()
+    name = "User"
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     reference = models.CharField(max_length=50)
     booking_date = models.DateField()
