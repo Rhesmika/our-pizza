@@ -3,11 +3,17 @@
 {% block content %}
 <section id="content">
 
-<h1>Bookings</h1>
+<h1>{{ user.get_username}}'s Bookings</h1>
+
+
 
 {% for booking in booking_list %}
-    <p>{{ booking.reference }}</p>
-    <p>{{ booking.booking_date }}</p>
+    {% if booking.author == user %}
+        <p>{{ booking.author }}</p>
+        <p>{{ booking.reference }}</p>
+        <p>{{ booking.booking_date }}</p>
+        <br>
+    {% endif %}
 {% endfor %}
 
 
