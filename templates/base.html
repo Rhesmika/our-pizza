@@ -9,12 +9,32 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="static/css/style.css">
-
 </head>
+
+
 <body>
+    <header>
+        <div id="logo-outer" >
+            <div><a href="#"><img id="logo-image" src="static/images/our-pizza-logo-05.png" alt="our-pizza-logo" aria-label="our-pizza-logo"></a></div>
+        </div>
+        <nav id="menu" aria-label="page-menu">
+            <ul>
+                <li><a href="#" aria-label="navigate to menu page">menu</a></li>
+                <li><a href="#" aria-label="navigate to register/signin page">book</a></li>
+                <li><a href="#" aria-label="navigate to contact page">contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
+
+<footer>
+    <p id="reserves">Rhesmika 2022 All Rights Reserved</p>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>

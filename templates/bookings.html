@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<title> Booking</title>
+<!-- <title> Booking</title>
 <h1> bookings</h1>
+    {% for booking in booking_list %}
+    <p>{{ booking.booking_date }}</p>
+    <p>party of: {{ booking.party_of}}</p>
+    <p>{{ booking.reference}}</p>
+    <p>{{ booking.status}}</p>
+    <br> -->
 
+
+    {% endfor %}
 {%endblock%}
