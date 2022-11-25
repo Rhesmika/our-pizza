@@ -8,20 +8,22 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png">
-<link rel="manifest" href="static/images/favicon/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+<link rel="manifest" href="{% static 'images/favicon/site.webmanifest' %}">
+
 
 </head>
+
 
 
 <body>
     <header>
         <div id="logo-outer" >
-            <div><a href="home.html"><img id="logo-image" src="static/images/our-pizza-logo-05.png" alt="our-pizza-logo" aria-label="our-pizza-logo"></a></div>
+            <div><a href="home.html"><img id="logo-image" src="{% static 'images/our-pizza-logo-05.png' %}" alt="our-pizza-logo" aria-label="our-pizza-logo"></a></div>
         </div>
         <nav id="menu" aria-label="page-menu">
             <ul>
