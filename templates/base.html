@@ -21,13 +21,25 @@
 <body>
     <header>
         <div id="logo-outer" >
-            <div><a href="#"><img id="logo-image" src="static/images/our-pizza-logo-05.png" alt="our-pizza-logo" aria-label="our-pizza-logo"></a></div>
+            <div><a href="home.html"><img id="logo-image" src="static/images/our-pizza-logo-05.png" alt="our-pizza-logo" aria-label="our-pizza-logo"></a></div>
         </div>
         <nav id="menu" aria-label="page-menu">
             <ul>
-                <li><a href="#" aria-label="navigate to menu page">menu</a></li>
-                <li><a href="#" aria-label="navigate to register/signin page">book</a></li>
-                <li><a href="#" aria-label="navigate to contact page">contact</a></li>
+                <li>
+                    <a href="menu.html" aria-label="navigate to menu page">menu</a>
+                </li>
+
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="bookings.html" aria-label="navigate to register/signin page">book</a>
+                </li>
+                {% else %}
+                <li>
+                    <a class="nav-user" href="{% url 'account_login' %}">book</a>
+                </li>
+                {% endif %}
+
+                <li><a href="contact.html" aria-label="navigate to contact page">contact</a></li>
                 {% if user.is_authenticated %}
                 <li  class="nav-user">
                     <a href="{% url 'account_logout' %}">logout</a>
