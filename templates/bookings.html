@@ -6,15 +6,19 @@
 <h1>{{ user.get_username}}'s Bookings</h1>
 
 
-
-{% for booking in booking_list %}
-    {% if booking.author == user %}
-        <p>{{ booking.author }}</p>
-        <p>{{ booking.reference }}</p>
-        <p>{{ booking.booking_date }}</p>
-        <br>
-    {% endif %}
-{% endfor %}
+<div class="container-fluid">
+    <div class="row">
+        {% for booking in booking_list %}
+            <div class="col-4">
+                {% if booking.author == user %}
+                    <p>{{ booking.reference }}</p>
+                    <p>{{ booking.booking_date }}</p>
+                    <p>{{ booking.party_of }} people</p>
+                    <br>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>  
 
 
 </section>
