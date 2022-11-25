@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1> Bookingss!</h1>>
-{%endblock%}
+<section id="content">
+
+<h1>Bookings</h1>
+
+{% for booking in booking_list %}
+    <p>{{ booking.reference }}</p>
+    <p>{{ booking.booking_date }}</p>
+{% endfor %}
+
+
+</section>
+{% endblock content %}

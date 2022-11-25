@@ -7,7 +7,6 @@ REQUEST_STATUS = ((0, 'Pending'), (1, 'Approved'), (2, 'Denied'))
 
 
 class Booking(models.Model):
-    name = "User"
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     reference = models.CharField(max_length=50)
     booking_date = models.DateField()
