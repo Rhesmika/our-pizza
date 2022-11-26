@@ -7,5 +7,5 @@ from datetime import datetime
 class UpcomingBookingsApproved(generic.ListView):
     model = Booking
     today = datetime.today()
-    queryset = Booking.objects.filter(booking_date__gte=today).order_by("booking_date")
+    queryset = Booking.objects.filter(booking_date__gte=today, status=1).order_by("booking_date")
     template_name = 'bookings.html'
