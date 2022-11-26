@@ -11,8 +11,6 @@ class UpcomingBookingsApproved(generic.ListView):
     template_name = 'bookings.html'
 
 
-class New(generic.ListView):
+class NewBooking(generic.ListView):
     model = Booking
-    today = datetime.today()
-    queryset = Booking.objects.filter(booking_date__gte=today, status=1).order_by("booking_date")
     template_name = 'bookings-new.html'
