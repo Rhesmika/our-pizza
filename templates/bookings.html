@@ -3,7 +3,7 @@
 {% block content %}
 <section id="content">
 
-<h3>{{ user.get_username}}'s Bookings</h3>
+<h3>{{ user.get_username}}'s Confirmed Bookings</h3>
 <br>
 
 
@@ -12,12 +12,14 @@
         {% for booking in booking_list %}
             {% if booking.author == user %}
                 <div class="col-4">
-                    <div class="col-4-content">
+                    <div class="conf-booking-content">
                         <p>{{ booking.reference }}</p>
                         <p>{{ booking.booking_date }}</p>
                         <p>{{ booking.party_of }} people</p>
-                        <br>
-                        <br>
+                        <div class="change-booking">
+                            <button class="edit-booking">edit</button>
+                            <button class="cancel-booking">cancel</button>
+                        </div>
                     </div>
                 </div>
             {% endif %}

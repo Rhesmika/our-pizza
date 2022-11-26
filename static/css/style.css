@@ -74,14 +74,34 @@ header{
 
 
 .col-4{
-    padding: 10px;
+    padding-bottom: 20px;
 }
 
-.col-4-content{
+.conf-booking-content{
     border: #eb8d8a solid 3px;
-    padding: 10px;
+    padding: 20px;
     line-height: 10px;
 }
+
+.change-booking{
+    font-size: smaller;
+}
+
+.change-booking button{
+    color: grey;
+    padding: 7px;
+    margin: 5px;
+}
+
+.edit-booking:hover{
+    color: #15668a;
+}
+
+.cancel-booking:hover{
+    color: #e3463b;
+}
+
+
 
 /* footer*/
 
