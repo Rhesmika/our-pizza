@@ -18,4 +18,4 @@ class NewBooking(CreateView):
     form_class = NewBookingForm
     model = Booking
     template_name = 'bookings-new.html'
-    success_url = ''
+    success_url = '/'
