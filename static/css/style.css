@@ -68,8 +68,25 @@ header{
     padding: 25px;
 }
 
+.new-booking{
+    background-color: #229c93;
+    color: white;
+    padding: 10px;
+    font-size: smaller;
+}
+
+.new-booking:hover{
+    background-color: #15668a;
+    color: white;
+    padding: 10px;
+    font-size: smaller;
+}
+
+
 .container-fluid{
     text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 
@@ -78,7 +95,7 @@ header{
 }
 
 .conf-booking-content{
-    border: #eb8d8a solid 3px;
+    border: #e3463b solid 2px;
     padding: 20px;
     line-height: 10px;
 }
