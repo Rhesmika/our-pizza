@@ -13,7 +13,7 @@ class Booking(models.Model):
     booking_date = models.DateField()
     booking_time = models.TimeField(default=datetime.time(19, 00))
     party_of = models.IntegerField(
-        default= 2,
+        default=2,
         validators=[
             MaxValueValidator(10),
             MinValueValidator(1)
