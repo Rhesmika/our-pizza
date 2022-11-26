@@ -26,3 +26,6 @@ class NewBooking(CreateView):
         self.object.status = 0
         self.object.save()
         return super().form_valid(form)
+
+def EditBooking(request, item_id):
+    return render(request, 'edit-booking.html')
