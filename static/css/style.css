@@ -63,10 +63,24 @@ header{
 /* content */
 
 #content{
-    background-color: #229c93;
     width: 100%;
     height: fit-content;
     padding: 25px;
+}
+
+.container-fluid{
+    text-align: center;
+}
+
+
+.col-4{
+    padding: 10px;
+}
+
+.col-4-content{
+    border: #eb8d8a solid 3px;
+    padding: 10px;
+    line-height: 10px;
 }
 
 /* footer*/
