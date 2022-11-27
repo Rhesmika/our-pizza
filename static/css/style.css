@@ -211,7 +211,27 @@ color: inherit;
     color: #e3463b;
 }
 
+#contact-outer{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-color: #229c93;
+    color: white;
+    text-align: center;
+}
 
+.social-networks{
+    text-align: center;
+}
+.social-networks  li{
+    display: inline;
+}
+.social-networks i{
+    font-size: 20px;
+    margin: 1%;
+    padding-right: 5%;
+    color: white(242, 174, 46, 1);
+}
 
 /* footer*/
 
