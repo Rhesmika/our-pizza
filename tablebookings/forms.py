@@ -20,3 +20,10 @@ class NewBookingForm(forms.ModelForm):
             'booking_time': TimeInput(attrs={'class': 'form-control'}),
             'party_of': forms.NumberInput(attrs={'class': 'form-control'}),
         }
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.author = self.request.user
+        self.object.status = 0
+        self.object.save()
+        return super().form_valid(form)

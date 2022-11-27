@@ -20,23 +20,10 @@ class NewBooking(CreateView):
     success_url = '/bookings'
     template_name = 'bookings-new.html'
 
-    def form_valid(self, form):
-        self.object = form.save(commit=False)
-        self.object.author = self.request.user
-        self.object.status = 0
-        self.object.save()
-        return super().form_valid(form)
 
 
 class EditBooking(CreateView):
     form_class = NewBookingForm
     model = Booking
-    success_url = ''
-    template_name = 'bookings-new.html'
-
-    def form_valid(self, form):
-        self.object = form.save(commit=False)
-        self.object.author = self.request.user
-        self.object.status = 0
-        self.object.save()
-        return super().form_valid(form)
+    success_url = '/bookings'
+    template_name = 'edit-booking.html'
