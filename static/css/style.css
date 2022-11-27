@@ -37,8 +37,6 @@ header{
     margin-top: 5px;
 }
 
-
-
 /* Navigation */
 a{
 text-decoration: none;
@@ -70,13 +68,13 @@ color: inherit;
     float: right;
 }
 
-/* content */
-
+/* content for templates */
+/*home*/
 #banner{
     width: 100%;
     height: 400px;
-    
 }
+
 #hero-image{
     width: 100%;
     height: 400px;
@@ -142,15 +140,19 @@ color: inherit;
     padding: 20px;
 }
 
+/*bookings*/
+/* forms */
 .form-group{
     width: 300px;
 }
+
 .form-group button{
     background-color: #229c93;
     color: white;
     padding: 10px;
     font-size: smaller;
 }
+
 .form-group button:hover{
     background-color: #15668a;
     color: white;
@@ -175,17 +177,14 @@ color: inherit;
     padding: 10px;
 }
 
-
 .container-fluid{
     text-align: center;
     padding-left: 0px;
     padding-right: 0px;
 }
 
-
 .col-4{
     padding-bottom: 20px;
-
 }
 
 .conf-booking-content{
@@ -212,6 +211,7 @@ color: inherit;
     color: #e3463b;
 }
 
+/*contact*/
 #contact-outer{
     width: 100%;
     height: auto;
@@ -221,12 +221,15 @@ color: inherit;
     text-align: center;
 }
 
+/*social media icons*/
 .social-networks{
     text-align: center;
 }
+
 .social-networks  li{
     display: inline;
 }
+
 .social-networks i{
     font-size: 20px;
     margin: 1%;
@@ -235,7 +238,6 @@ color: inherit;
 }
 
 /* footer*/
-
 footer{
     bottom: 0px;
     width: 100%;
@@ -248,3 +250,28 @@ footer{
     text-align: center;
     padding-top: 15px;
 }
+
+/*Media Queries*/
+
+/* For larger to medium screens size from 1300px wide and down */
+@media screen and (max-width: 1300px) {
+
+}
+
+/* For large screens size from 1030px wide and down */
+@media screen and (max-width: 1030px) {
+
+}
+
+/* For medium screens size from 770px wide and down */
+@media screen and (max-width: 770) {
+
+}
+
+/* For small screens size from 480 wide and down */
+@media screen and (max-width: 480px) {
+
+}
+
+
+
