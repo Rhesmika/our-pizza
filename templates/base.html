@@ -20,7 +20,7 @@
     <div id="page-container">
         <header>
             <div id="logo-outer" >
-                <div><a href="home.html"><img id="logo-image" src="{% static 'images/our-pizza-logo-05.png' %}" alt="our-pizza-logo" aria-label="our-pizza-logo"></a></div>
+                <div><a href="{% url 'home' %}"><img id="logo-image" src="{% static 'images/our-pizza-logo-05.png' %}" alt="our-pizza-logo" aria-label="our-pizza-logo"></a></div>
             </div>
             <nav id="menu" aria-label="page-menu">
                 <ul>
@@ -38,7 +38,7 @@
                     </li>
                     {% endif %}
 
-                    <li><a href="contact.html" aria-label="navigate to contact page">contact</a></li>
+                    <li><a href="/contact" aria-label="navigate to contact page">contact</a></li>
                     {% if user.is_authenticated %}
                     <li  class="nav-user">
                         <a href="{% url 'account_logout' %}">logout</a>

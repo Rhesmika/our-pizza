@@ -50,13 +50,15 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     'cloudinary',
+    'home',
+    'contact',
     'tablebookings',
 ]
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/bookings/'
-LOGOUT_REDIRECT_URL = '/bookings/'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
