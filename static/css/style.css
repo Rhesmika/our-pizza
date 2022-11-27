@@ -262,13 +262,29 @@ footer{
     }
 }
 
-/* For small screens size from 5100 wide and down */
+/* For small screens size from 510px wide and down */
 @media screen and (max-width: 510px) {
     #menu .nav-user{
         float: left;
     }
     #menu li{
         padding-top: 10px;
+    }
+    #hero-image{
+        background: url('../images/our-pizza-hero-image-min.jpg') no-repeat center center;
+        background-size: 100%;
+    }
+    #gallery-1{
+        background: url('../images/our-pizza-dough-min.jpg') center center no-repeat;
+        background-size: 100%;
+    }
+    #gallery-2{
+        background: url('../images/our-pizza-oven-min.jpg') center center no-repeat;
+        background-size: 100%;
+    }
+    #gallery-3{
+        background: url('../images/our-pizza-resturant-min.jpg') center center no-repeat;
+        background-size: 100%;
     }
 }
 

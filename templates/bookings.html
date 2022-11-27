@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block head_title %}
 <title>Bookings</title>
+{% endblock %}
+
+{% block content %}
 <section id="content">
 <h3>{{ user.get_username}}'s upcoming bookings</h3>
 <br>
