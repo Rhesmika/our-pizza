@@ -25,7 +25,7 @@
             <nav id="menu" aria-label="page-menu">
                 <ul>
                     <li>
-                        <a href="menu.html" aria-label="navigate to menu page">menu</a>
+                        <a href="{% url 'home' %}" aria-label="navigate to home page">home</a>
                     </li>
 
                     {% if user.is_authenticated %}
