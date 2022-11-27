@@ -45,13 +45,11 @@ color: inherit;
 
 #menu{
     font-size: 15px;
-    line-height: 70px;
 }
 
 #menu li{
     float: left;
     margin-right: 30px;
-    margin-top: 20px;
     list-style-type: none;
 }
 
@@ -72,7 +70,7 @@ color: inherit;
 /*home*/
 #banner{
     width: 100%;
-    height: 400px;
+    height: fit-content;
 }
 
 #hero-image{
@@ -114,7 +112,7 @@ color: inherit;
 }
 
 #image-bank{
-    height: 200px;
+    height: 400px;
 }
 
 .gallery-img{
@@ -253,24 +251,55 @@ footer{
 
 /*Media Queries*/
 
-/* For larger to medium screens size from 1300px wide and down */
-@media screen and (max-width: 1300px) {
-
-}
-
-/* For large screens size from 1030px wide and down */
 @media screen and (max-width: 1030px) {
 
 }
 
 /* For medium screens size from 770px wide and down */
-@media screen and (max-width: 770) {
+@media screen and (max-width: 700px) {
+    #hero-image{
+        height: 250px;
+    }
+}
 
+/* For small screens size from 5100 wide and down */
+@media screen and (max-width: 510px) {
+    #menu .nav-user{
+        float: left;
+    }
+    #menu li{
+        padding-top: 10px;
+    }
 }
 
 /* For small screens size from 480 wide and down */
 @media screen and (max-width: 480px) {
-
+    #hero-image{
+        height: 200px;
+    }
+    .col-6{
+        width: 100%;
+        height: 200px;
+        border: none;
+        padding-bottom: none;
+    }
+    .container-fluid{
+        padding: none;
+    }
+    #discounts{
+        padding-top: 50px;
+    }
+    #image-bank{
+        height: 200px;
+    }
+    .image-bank-container{
+        margin-bottom: 0px;
+    }
+    p{
+        font-size: smaller;
+        margin-bottom: 0.5rem;
+        line-height: 15px;
+    }
 }
 
 
