@@ -3,7 +3,7 @@ from .models import Booking
 from django.views import generic
 from datetime import datetime
 from .forms import NewBookingForm
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User
 
 
@@ -19,6 +19,7 @@ class NewBooking(CreateView):
     model = Booking
     success_url = '/bookings'
     template_name = 'bookings-new.html'
+
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.author = self.request.user
@@ -31,8 +32,15 @@ class EditBooking(UpdateView):
     form_class = NewBookingForm
     success_url = '/bookings'
     template_name = 'edit-booking.html'
+
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.status = 2
         self.object.save()
         return super().form_valid(form)
+
+
+class DeleteBooking(DeleteView):
+    model = Booking
+    template_name = 'delete-booking.html'
+    success_url = '/bookings'

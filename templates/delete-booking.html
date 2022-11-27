@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="content">
+<h3>delete booking</h3>
+<h4>are you sure you want to cancel this booking</h4>
+<br>
+<p>{{ booking.reference }}</p>
+<p>{{ booking.booking_date }}</p>
+<p>{{ booking.booking_time }}</p>
+<p>{{ booking.party_of }} people</p>
+<br>
+    <form method="POST">
+        {% csrf_token %}
+        <strong>are you sure?</strong> <br>
+        <button type="submit">Yes, Cancel Booking</button>
+    </form> 
+</section>
+{% endblock content %}

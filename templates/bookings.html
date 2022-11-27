@@ -20,7 +20,7 @@
                         <p>{{ booking.party_of }} people</p>
                         <div class="change-booking">
                             <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
-                            <button class="cancel-booking">cancel</button>
+                            <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}">cancel</a></button>
                         </div>
                     </div>
                 </div>
