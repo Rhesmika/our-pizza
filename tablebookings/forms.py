@@ -16,7 +16,7 @@ class NewBookingForm(forms.ModelForm):
         fields = ('reference', 'booking_date', 'booking_time', 'party_of',)
         widgets = {
             'reference': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'eg. Dinner with Michael'}),
-            'booking_date': DateInput(attrs={'class': 'form-control', 'placeholder': 'YYYY-MM-DD'}),
+            'booking_date': DateInput(attrs={'class': 'form-control'}),
             'booking_time': TimeInput(attrs={'class': 'form-control'}),
             'party_of': forms.NumberInput(attrs={'class': 'form-control'}),
         }
