@@ -1,18 +1,15 @@
 {% extends "base.html" %}
 
 {% block head_title %}
-<title>Bookings</title>
+<title>Pending Bookings</title>
 {% endblock %}
 
 {% block content %}
 <section id="content">
-<h3>{{ user.get_username}}'s upcoming bookings</h3>
+<h3>{{ user.get_username}}'s pending bookings</h3>
 <br>
 
 <div><a href="{% url 'new-booking' %}"><button class="new-booking">new booking<button></a></div>
-    <br>
-<div><a href="{% url 'pending-bookings' %}"><button class="new-booking">view pending bookings<button></a></div>
-
 <br>
 <div class="container-fluid">
     <div class="row">

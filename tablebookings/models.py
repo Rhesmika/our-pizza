@@ -5,7 +5,7 @@ import datetime
 from django.urls import reverse
 
 
-REQUEST_STATUS = ((0, 'Pending'), (1, 'Approved'), (2, 'Edited'), (3, 'Denied'))
+REQUEST_STATUS = ((0, 'Pending'), (1, 'Approved'), (2, 'Denies'))
 
 
 class Booking(models.Model):

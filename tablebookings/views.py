@@ -13,6 +13,11 @@ class UpcomingBookingsApproved(generic.ListView):
     queryset = Booking.objects.filter(booking_date__gte=today, status=1).order_by("booking_date")
     template_name = 'bookings.html'
 
+class UpcomingBookingsPending(generic.ListView):
+    model = Booking
+    today = datetime.today()
+    queryset = Booking.objects.filter(booking_date__gte=today, status=0).order_by("booking_date")
+    template_name = 'bookings_pending.html'
 
 class NewBooking(CreateView):
     form_class = NewBookingForm
@@ -35,7 +40,7 @@ class EditBooking(UpdateView):
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
-        self.object.status = 2
+        self.object.status = 0
         self.object.save()
         return super().form_valid(form)
 
