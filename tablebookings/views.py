@@ -21,8 +21,7 @@ class NewBooking(CreateView):
     template_name = 'bookings-new.html'
 
 
-
-class EditBooking(CreateView):
+class EditBooking(UpdateView):
     form_class = NewBookingForm
     model = Booking
     success_url = '/bookings'
