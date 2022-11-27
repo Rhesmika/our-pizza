@@ -18,7 +18,7 @@ class NewBooking(CreateView):
     form_class = NewBookingForm
     model = Booking
     success_url = '/bookings'
-    template_name = 'bookings-new.html'
+    template_name = 'booking_new.html'
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -31,7 +31,7 @@ class EditBooking(UpdateView):
     model = Booking
     form_class = NewBookingForm
     success_url = '/bookings'
-    template_name = 'edit-booking.html'
+    template_name = 'booking_edit.html'
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -42,5 +42,5 @@ class EditBooking(UpdateView):
 
 class DeleteBooking(DeleteView):
     model = Booking
-    template_name = 'delete-booking.html'
+    template_name = 'booking_delete.html'
     success_url = '/bookings'

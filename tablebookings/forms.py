@@ -13,7 +13,7 @@ class TimeInput(forms.TimeInput):
 class NewBookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ('reference','booking_date', 'booking_time', 'party_of',)
+        fields = ('reference', 'booking_date', 'booking_time', 'party_of',)
         widgets = {
             'reference': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'eg. Dinner with Michael'}),
             'booking_date': DateInput(attrs={'class': 'form-control', 'placeholder': 'YYYY-MM-DD'}),
