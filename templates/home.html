@@ -1,7 +1,38 @@
 {% extends "base.html" %}
 
 {% block content %}
+<title>Home</title>
 <section id="content">
-<h1> Home!</h1>
+    <section>
+        <div id="banner">
+            <img id="hero-image" aria-label="pizza-header-image">
+        </div>
+    </section>
+    <div id="slogan"><h3>Yes... it's as good as it looks</h3></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6" id="good-to-know">
+                <h3>That's good to know</h3>
+                <p>All our dough is made in house<p>
+                <p>All ingredients are FRESH</p>
+                <p>Gluten free options = yes!</p>
+                <p>Vegan options = yes!</p>
+            </div>
+            <div class="col-6"id="discounts">
+                <h3>Discount</h3>
+                <p>We love a discount<p>
+                <p>Use “Code-fresh” when you get the bill for 1% off your order.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid image-bank-container">
+        <div class="row" id="image-bank">
+            <div class="col-4 gallery-img" id="gallery-1"></div>
+            <div class="col-4 gallery-img" id="gallery-2"></div>
+            <div class="col-4 gallery-img" id="gallery-3"></div>
+        </div>
+    </div>
 </section>
 {%endblock%}

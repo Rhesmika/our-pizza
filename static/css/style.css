@@ -9,6 +9,7 @@
 #page-container{
     position: relative;
     min-height: 100vh;
+
 }
 
 body{
@@ -71,10 +72,73 @@ color: inherit;
 
 /* content */
 
+#banner{
+    width: 100%;
+    height: 400px;
+    
+}
+#hero-image{
+    width: 100%;
+    height: 400px;
+    background: url('../images/our-pizza-hero-image.jpg') no-repeat bottom center;
+    background-size: 100%;
+}
+
+#slogan{
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    color: #eb8d8a;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.col-6{
+    border: white solid 15px;
+    height: 300px;
+    padding: 25px;
+    color: white;
+}
+
+#good-to-know{
+    background-color: #e3463b;
+    border-left: none;
+}
+
+#discounts{
+    background-color: #229c93;
+    border-right: none;
+
+}
+.image-bank-container{
+    margin-bottom: 20px;
+}
+
+#image-bank{
+    height: 200px;
+}
+
+.gallery-img{
+    border: white solid 15px;
+}
+ 
+#gallery-1{
+    background: url(../images/our-pizza-dough.jpg) center center no-repeat;
+    background-size: 100%;
+}
+#gallery-2{
+    background: url(../images/our-pizza-oven.jpg) center center no-repeat;
+    background-size: 100%;
+}
+#gallery-3{
+    background: url(../images/our-pizza-resturant.jpg) center center no-repeat;
+    background-size: 115%;
+}
+
 #content{
     width: 100%;
     height: fit-content;
-    padding: 25px;
 }
 
 .form-group{
@@ -120,6 +184,7 @@ color: inherit;
 
 .col-4{
     padding-bottom: 20px;
+
 }
 
 .conf-booking-content{
@@ -151,11 +216,10 @@ color: inherit;
 /* footer*/
 
 footer{
-    position:absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
     height: 50px;
-    background-color: #eb8d8a;
+    background-color:#15668a;
 }
 
 #reserves{
