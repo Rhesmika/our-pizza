@@ -31,7 +31,7 @@
             <td>{{ booking.booking_date }}</td>
             <td>{{ booking.booking_time }}</td>
             <td>{{ booking.party_of }}</td>
-            <td>{{ booking.status }}</td>
+            <td class="booking-status">{{ booking.status }}</td>
             <td>                        
                 <div class="change-booking">
                     <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
