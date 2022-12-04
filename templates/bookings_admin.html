@@ -1,23 +1,22 @@
 {% extends "base.html" %}
 
 {% block head_title %}
-<title>Bookings</title>
+<title> Admin Bookings</title>
 {% endblock %}
 
 {% block content %}
 <section id="content">
-<h3>{{ user.get_username}}'s upcoming bookings</h3>
+<h3>Upcoming bookings</h3>
 <br>
 
 <div><a href="{% url 'new-booking' %}"><button class="booking-button">new booking<button></a></div>
     <br>
-<div><a href="{% url 'pending-bookings' %}"><button class="booking-button">view pending bookings<button></a></div>
+<div><a href="{% url 'all-pending-bookings' %}"><button class="booking-button">view pending bookings<button></a></div>
 
 <br>
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         {% for booking in booking_list %}
-            {% if booking.author == user %}
                 <div class="col-4">
                     <div class="conf-booking-content">
                         <p>{{ booking.reference }}</p>
@@ -33,5 +32,8 @@
             {% endif %}
         {% endfor %}
     </div>  
+</div> -->
+
+<h1> Admin Portal</h1>
 </section>
 {% endblock content %}

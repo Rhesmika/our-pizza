@@ -219,19 +219,19 @@ span.reveal{
     padding: 10px;
 }
 
-.new-booking{
+.booking-button{
     background-color: #229c93;
     color: white;
     padding: 10px;
     font-size: smaller;
 }
 
-.new-booking a{
+.booking-button a{
     text-decoration: none;
     color: inherit;
 }
 
-.new-booking:hover{
+.booking-button:hover{
     background-color: #15668a;
     color: white;
     padding: 10px;
@@ -298,11 +298,11 @@ span.reveal{
 
 /* footer*/
 footer{
-    bottom: 0px;
     width: 100%;
     height: 50px;
     background-color:#15668a;
-}
+    left: 0;
+    bottom: 0;}
 
 #reserves{
     color: white;
