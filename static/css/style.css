@@ -285,7 +285,9 @@ footer{
 /*Media Queries*/
 
 @media screen and (max-width: 1030px) {
-
+    #image-bank{
+        height: 250px;
+    }
 }
 
 /* For medium screens size from 770px wide and down */
@@ -338,11 +340,11 @@ footer{
     #discounts{
         padding-top: 50px;
     }
-    #image-bank{
-        height: 200px;
-    }
     .image-bank-container{
         margin-bottom: 0px;
+    }
+    #image-bank{
+        height: 120px;
     }
     p{
         font-size: smaller;
