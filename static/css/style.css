@@ -91,6 +91,16 @@ color: inherit;
     font-style: italic;
 }
 
+span{
+    opacity: 0;
+    /* transition: all 0.5s ease; */
+    transition-timing-function: steps(200)
+}
+
+span.reveal{
+    opacity: 1;
+}
+
 .col-6{
     border: white solid 15px;
     border-top: none;
