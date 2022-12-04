@@ -32,7 +32,12 @@
             <td>{{ booking.booking_time }}</td>
             <td>{{ booking.party_of }}</td>
             <td>{{ booking.status }}</td>
-            <td>edit</td>
+            <td>                        
+                <div class="change-booking">
+                    <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
+                    <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}">cancel</a></button>
+                </div>
+            </td>
         </tr>
         {% endfor %}
     </thead>
