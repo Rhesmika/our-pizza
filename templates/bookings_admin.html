@@ -1,39 +1,64 @@
 {% extends "base.html" %}
 
 {% block head_title %}
-<title> Admin Bookings</title>
+<title>Admin Bookings</title>
 {% endblock %}
 
 {% block content %}
 <section id="content">
-<h3>Upcoming bookings</h3>
+<h3>Our-Pizza upcoming bookings</h3>
 <br>
 
 <div><a href="{% url 'new-booking' %}"><button class="booking-button">new booking<button></a></div>
     <br>
-<div><a href="{% url 'all-pending-bookings' %}"><button class="booking-button">view pending bookings<button></a></div>
+<div><a href="{% url 'pending-bookings' %}"><button class="booking-button">view pending bookings<button></a></div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Reference</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Party of</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+        </tr>
+        {% for booking in booking_list %}
+        <tr scope="row">
+            <td>{{ booking.author }}</td>
+            <td>{{ booking.reference }}</td>
+            <td>{{ booking.booking_date }}</td>
+            <td>{{ booking.booking_time }}</td>
+            <td>{{ booking.party_of }}</td>
+            <td>{{ booking.status }}</td>
+            <td>edit</td>
+        </tr>
+        {% endfor %}
+    </thead>
+</table>
+
+
+
+<!-- {% for booking in booking_list %}
+{% if booking.author == user %}
+    <div class="col-4">
+        <div class="conf-booking-content">
+            <p>{{ booking.reference }}</p>
+            <p>{{ booking.booking_date }}</p>
+            <p>{{ booking.booking_time }}</p>
+            <p>{{ booking.party_of }} people</p>
+            <div class="change-booking">
+                <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
+                <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}">cancel</a></button>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% endfor %} -->
+
 
 <br>
-<!-- <div class="container-fluid">
-    <div class="row">
-        {% for booking in booking_list %}
-                <div class="col-4">
-                    <div class="conf-booking-content">
-                        <p>{{ booking.reference }}</p>
-                        <p>{{ booking.booking_date }}</p>
-                        <p>{{ booking.booking_time }}</p>
-                        <p>{{ booking.party_of }} people</p>
-                        <div class="change-booking">
-                            <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
-                            <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}">cancel</a></button>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>  
-</div> -->
 
-<h1> Admin Portal</h1>
 </section>
 {% endblock content %}

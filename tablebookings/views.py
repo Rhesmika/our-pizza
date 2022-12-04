@@ -5,6 +5,7 @@ from datetime import datetime
 from .forms import NewBookingForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 class UpcomingBookingsApproved(generic.ListView):
@@ -13,11 +14,13 @@ class UpcomingBookingsApproved(generic.ListView):
     queryset = Booking.objects.filter(booking_date__gte=today, status=1).order_by("booking_date")
     template_name = 'bookings.html'
 
+
 class UpcomingBookingsPending(generic.ListView):
     model = Booking
     today = datetime.today()
     queryset = Booking.objects.filter(booking_date__gte=today, status=0).order_by("booking_date")
     template_name = 'bookings_pending.html'
+
 
 class NewBooking(CreateView):
     form_class = NewBookingForm
@@ -49,3 +52,10 @@ class DeleteBooking(DeleteView):
     model = Booking
     template_name = 'booking_delete.html'
     success_url = '/bookings'
+
+
+class AllUpcomingBookings(generic.ListView):
+    model = Booking
+    today = datetime.today()
+    queryset = Booking.objects.filter(booking_date__gte=today).order_by("booking_date")
+    template_name = 'bookings_admin.html'
