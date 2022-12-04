@@ -92,14 +92,30 @@ color: inherit;
 
 .col-6{
     border: white solid 15px;
-    height: 300px;
-    padding: 25px;
+    padding: 50px;
     color: white;
 }
 
 #good-to-know{
     background-color: #e3463b;
     border-left: none;
+}
+.intro-img{
+    width: 70px;
+    height: 100px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#intro-img-left{
+    background: url('../images/our-pizza-pepper.png') no-repeat center center;
+    background-size: 100%;
+}
+
+#intro-img-right{
+    background: url('../images/our-pizza-tomato.png') no-repeat center center;
+    background-size: 100%;
 }
 
 #discounts{
