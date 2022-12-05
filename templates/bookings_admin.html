@@ -36,32 +36,13 @@
                 <div class="change-booking">
                     <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
                     <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}">cancel</a></button>
+                    <button class="approve-booking"><a>approve</a></button>
                 </div>
             </td>
         </tr>
         {% endfor %}
     </thead>
 </table>
-
-
-
-<!-- {% for booking in booking_list %}
-{% if booking.author == user %}
-    <div class="col-4">
-        <div class="conf-booking-content">
-            <p>{{ booking.reference }}</p>
-            <p>{{ booking.booking_date }}</p>
-            <p>{{ booking.booking_time }}</p>
-            <p>{{ booking.party_of }} people</p>
-            <div class="change-booking">
-                <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
-                <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}">cancel</a></button>
-            </div>
-        </div>
-    </div>
-{% endif %}
-{% endfor %} -->
-
 
 <br>
 

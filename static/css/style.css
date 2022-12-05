@@ -269,7 +269,12 @@ span.reveal{
 .cancel-booking:hover{
     color: #e3463b;
 }
-
+.approve-booking{
+    visibility: hidden;
+}
+.approve-booking.reveal{
+    visibility: visible;
+}
 /*contact*/
 #contact-outer{
     width: 100%;

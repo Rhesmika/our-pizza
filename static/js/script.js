@@ -9,7 +9,7 @@ window.addEventListener("scroll", () => {
     }
 })
 
-// /* Slogan */
+// // /* Slogan */
 // const slogan = document.querySelector("#slogan-text");
 // const strSlogan = slogan.textContent;
 // const splitSlogan = strSlogan.split("");
@@ -39,7 +39,6 @@ window.addEventListener("scroll", () => {
 
 /* Booking Status Converter */
 
-
 var tableStatus = document.getElementsByClassName('booking-status');
 
 for (var i = 0; i < tableStatus.length; ++i) {
@@ -55,8 +54,17 @@ for (var i = 0; i < tableStatus.length; ++i) {
 
 function updateStatusPending(newStatus){
     tableStatus[i].innerHTML = newStatus;
+    approveBooking();
 }
 
 function updateStatusApproved(newStatus){
     tableStatus[i].innerHTML = newStatus;
 }
+
+/* Add approve booking button to pending bookings*/
+function approveBooking(){
+    let approveButton = document.getElementsByClassName("approve-booking");
+    approveButton[i].classList.add("reveal");
+}
+
+
