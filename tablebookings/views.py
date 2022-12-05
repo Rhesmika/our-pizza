@@ -79,3 +79,14 @@ class CancelBooking(DeleteView):
     model = Booking
     template_name = 'booking_admin_cancel.html'
     success_url = '/bookings/admin-all'
+
+class UpdateBooking(UpdateView):
+    model = Booking
+    form_class = NewBookingForm
+    success_url = '/bookings/admin-all'
+    template_name = 'booking_admin_update.html'
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.save()
+        return super().form_valid(form)

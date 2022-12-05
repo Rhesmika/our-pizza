@@ -13,5 +13,6 @@ urlpatterns = [
     path('admin-all', views.AllUpcomingBookings.as_view(), name="admin-all-bookings"),
     path('admin-approve-booking/<int:pk>', views.ApproveBooking.as_view(), name="admin-approve-booking"),
     path('admin-cancel-booking/<int:pk>', views.CancelBooking.as_view(), name="admin-cancel-booking"),
+    path('admin-update-booking/<int:pk>', views.UpdateBooking.as_view(), name="admin-update-booking"),
 
 ]
