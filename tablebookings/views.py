@@ -59,3 +59,16 @@ class AllUpcomingBookings(generic.ListView):
     today = datetime.today()
     queryset = Booking.objects.filter(booking_date__gte=today).order_by("booking_date")
     template_name = 'bookings_admin.html'
+
+
+class ApproveBooking(UpdateView):
+    model = Booking
+    form_class = NewBookingForm
+    success_url = '/bookings/admin-all'
+    template_name = 'booking_admin_approve.html'
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.status = 1
+        self.object.save()
+        return super().form_valid(form)

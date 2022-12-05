@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+<title>Approve Booking</title>
+{% endblock %}
+
+{% block content %}
+<section id="content">
+    <h3>edit booking</h3>
+        <div class="form-group">
+            <form method="POST">
+                {{ form.as_p }}
+                    {% csrf_token %}
+                    <button type="submit">Update Item</button>
+            </form> 
+        </div>
+    </section>
+{% endblock content %}
