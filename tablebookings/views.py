@@ -54,6 +54,8 @@ class DeleteBooking(DeleteView):
     success_url = '/bookings'
 
 
+# Admin views 
+
 class AllUpcomingBookings(generic.ListView):
     model = Booking
     today = datetime.today()
@@ -72,3 +74,8 @@ class ApproveBooking(UpdateView):
         self.object.status = 1
         self.object.save()
         return super().form_valid(form)
+
+class CancelBooking(DeleteView):
+    model = Booking
+    template_name = 'booking_admin_cancel.html'
+    success_url = '/bookings/admin-all'

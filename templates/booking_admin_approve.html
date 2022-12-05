@@ -6,12 +6,12 @@
 
 {% block content %}
 <section id="content">
-    <h3>edit booking</h3>
+    <h3>Approve Booking </h3>
         <div class="form-group">
             <form method="POST">
                 {{ form.as_p }}
                     {% csrf_token %}
-                    <button type="submit">Update Item</button>
+                    <button type="submit">Approve Booking</button>
             </form> 
         </div>
     </section>

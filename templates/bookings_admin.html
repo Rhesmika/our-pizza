@@ -35,7 +35,7 @@
             <td>                        
                 <div class="change-booking">
                     <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
-                    <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}">cancel</a></button>
+                    <button class="cancel-booking"><a href="{% url 'admin-cancel-booking' booking.id %}">cancel</a></button>
                     <button class="approve-booking"><a href="{% url 'admin-approve-booking' booking.id %}">approve</a></button>
                 </div>
             </td>
