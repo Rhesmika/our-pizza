@@ -44,7 +44,7 @@ function complete(){
 
 /* Admin Booking Table Status Converter */
 
-if(window.location.pathname == 'bookings/admin-all') {
+if(window.location.pathname == '/bookings/admin-all') {
     var tableStatus = document.getElementsByClassName('booking-status');
 
     for (var i = 0; i < tableStatus.length; ++i) {
