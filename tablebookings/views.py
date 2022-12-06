@@ -9,21 +9,21 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin, 
 
 
 # User Views
-class UpcomingBookingsApproved(generic.ListView):
+class UpcomingBookingsApproved(LoginRequiredMixin, generic.ListView):
     model = Booking
     today = datetime.today()
     queryset = Booking.objects.filter(booking_date__gte=today, status=1).order_by("booking_date")
     template_name = 'bookings.html'
 
 
-class UpcomingBookingsPending(generic.ListView):
+class UpcomingBookingsPending(LoginRequiredMixin, generic.ListView):
     model = Booking
     today = datetime.today()
     queryset = Booking.objects.filter(booking_date__gte=today, status=0).order_by("booking_date")
     template_name = 'bookings_pending.html'
 
 
-class NewBooking(CreateView):
+class NewBooking(LoginRequiredMixin, CreateView):
     form_class = NewBookingForm
     model = Booking
     success_url = '/bookings'
@@ -36,7 +36,7 @@ class NewBooking(CreateView):
         return super().form_valid(form)
 
 
-class EditBooking(UpdateView):
+class EditBooking(LoginRequiredMixin, UpdateView):
     model = Booking
     form_class = NewBookingForm
     success_url = '/bookings'
@@ -49,7 +49,7 @@ class EditBooking(UpdateView):
         return super().form_valid(form)
 
 
-class DeleteBooking(DeleteView):
+class DeleteBooking(LoginRequiredMixin, DeleteView):
     model = Booking
     template_name = 'booking_delete.html'
     success_url = '/bookings'
@@ -74,6 +74,7 @@ class AllUpcomingBookings(SuperuserRequiredMixin, generic.ListView):
     today = datetime.today()
     queryset = Booking.objects.filter(booking_date__gte=today).order_by("booking_date")
     template_name = 'bookings_admin.html'
+
 
 class ApproveBooking(SuperuserRequiredMixin, UpdateView):
     model = Booking
