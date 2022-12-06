@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.mixins import UserPassesTestMixin
 
 
+# User Views
 class UpcomingBookingsApproved(generic.ListView):
     model = Booking
     today = datetime.today()
@@ -54,16 +55,21 @@ class DeleteBooking(DeleteView):
     success_url = '/bookings'
 
 
-# Admin views 
+# Superuser Test
+class SuperuserRequiredMixin(UserPassesTestMixin):
+    def test_func(self):
+        return self.request.user.is_superuser
 
-class AllUpcomingBookings(generic.ListView):
+
+# Admin views 
+class AllUpcomingBookings(SuperuserRequiredMixin, generic.ListView):
     model = Booking
     today = datetime.today()
     queryset = Booking.objects.filter(booking_date__gte=today).order_by("booking_date")
     template_name = 'bookings_admin.html'
 
 
-class ApproveBooking(UpdateView):
+class ApproveBooking(SuperuserRequiredMixin, UpdateView):
     model = Booking
     form_class = NewBookingForm
     success_url = '/bookings/admin-all'
@@ -75,12 +81,12 @@ class ApproveBooking(UpdateView):
         self.object.save()
         return super().form_valid(form)
 
-class CancelBooking(DeleteView):
+class CancelBooking(SuperuserRequiredMixin, DeleteView):
     model = Booking
     template_name = 'booking_admin_cancel.html'
     success_url = '/bookings/admin-all'
 
-class UpdateBooking(UpdateView):
+class UpdateBooking(SuperuserRequiredMixin, UpdateView):
     model = Booking
     form_class = NewBookingForm
     success_url = '/bookings/admin-all'
