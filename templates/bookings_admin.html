@@ -9,9 +9,9 @@
 <h3>Our-Pizza upcoming bookings</h3>
 <br>
 
-<div><a href="{% url 'new-booking' %}"><button class="booking-button">new booking<button></a></div>
+<div><a href="{% url 'new-booking' %}" aria-label="new booking button"><button class="booking-button">new booking<button></a></div>
     <br>
-<div><a href="{% url 'pending-bookings' %}"><button class="booking-button">view pending bookings<button></a></div>
+<div><a href="{% url 'pending-bookings' %}" aria-label="view pending bookings button"><button class="booking-button">view pending bookings<button></a></div>
 
 <table class="table">
     <thead>
@@ -34,9 +34,9 @@
             <td class="booking-status">{{ booking.status }}</td>
             <td>                        
                 <div class="change-booking">
-                    <button class="edit-booking"><a href="{% url 'admin-update-booking' booking.id %}">update</a></button>
-                    <button class="cancel-booking"><a href="{% url 'admin-cancel-booking' booking.id %}">cancel</a></button>
-                    <button class="approve-booking"><a href="{% url 'admin-approve-booking' booking.id %}">approve</a></button>
+                    <button class="edit-booking" aria-label="link to update booking"><a href="{% url 'admin-update-booking' booking.id %}">update</a></button>
+                    <button class="cancel-booking" aria-label="link to cancel booking"><a href="{% url 'admin-cancel-booking' booking.id %}">cancel</a></button>
+                    <button class="approve-booking" aria-label="link to approve booking"><a href="{% url 'admin-approve-booking' booking.id %}">approve</a></button>
                 </div>
             </td>
         </tr>

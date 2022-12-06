@@ -9,7 +9,7 @@
 <h3>{{ user.get_username}}'s pending bookings</h3>
 <br>
 
-<div><a href="{% url 'new-booking' %}"><button class="booking-button">new booking<button></a></div>
+<div><a href="{% url 'new-booking' %}" aria-label="new booking button"><button class="booking-button">new booking<button></a></div>
 <br>
 <div class="container-fluid">
     <div class="row">
@@ -22,8 +22,8 @@
                         <p>{{ booking.booking_time }}</p>
                         <p>{{ booking.party_of }} people</p>
                         <div class="change-booking">
-                            <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}">edit</a></button>
-                            <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}">cancel</a></button>
+                            <button class="edit-booking"><a href="{% url 'edit-booking' booking.id %}" aria-labe="edit booking button">edit</a></button>
+                            <button class="cancel-booking"><a href="{% url 'delete-booking' booking.id %}" aria-label="cancel booking button">cancel</a></button>
                         </div>
                     </div>
                 </div>
