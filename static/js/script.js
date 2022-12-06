@@ -11,7 +11,9 @@ window.addEventListener("scroll", () => {
 
 
 /* Slogan */
-const slogan = document.querySelector("#slogan-text");
+
+if(window.location.pathname == '/') {
+    const slogan = document.querySelector("#slogan-text");
 const strSlogan = slogan.textContent;
 const splitSlogan = strSlogan.split("");
 slogan.textContent = "";
@@ -36,35 +38,45 @@ function complete(){
     clearInterval(timer);
     timer = null;
 }
+}
+
+
 
 /* Admin Booking Table Status Converter */
 
-var tableStatus = document.getElementsByClassName('booking-status');
+if(window.location.pathname == 'bookings/admin-all') {
+    var tableStatus = document.getElementsByClassName('booking-status');
 
-for (var i = 0; i < tableStatus.length; ++i) {
-    console.log(tableStatus[i].innerHTML);
-    if (tableStatus[i].innerHTML == "0"){
-        newStatus = "Pending";
-        updateStatusPending(newStatus);
-    } else if (tableStatus[i].innerHTML == "1"){
-        newStatus = "Approved";
-        updateStatusApproved(newStatus);
+    for (var i = 0; i < tableStatus.length; ++i) {
+        console.log(tableStatus[i].innerHTML);
+        if (tableStatus[i].innerHTML == "0"){
+            newStatus = "Pending";
+            updateStatusPending(newStatus);
+        } else if (tableStatus[i].innerHTML == "1"){
+            newStatus = "Approved";
+            updateStatusApproved(newStatus);
+        }
     }
+
+    function updateStatusPending(newStatus){
+        tableStatus[i].innerHTML = newStatus;
+        approveBooking();
+    }
+
+    function updateStatusApproved(newStatus){
+        tableStatus[i].innerHTML = newStatus;
+    }
+
+    /* Add approve booking button to pending bookings*/
+
+    function approveBooking(){
+        let approveButton = document.getElementsByClassName("approve-booking");
+        approveButton[i].classList.add("reveal");
+    }
+
+    
 }
 
-function updateStatusPending(newStatus){
-    tableStatus[i].innerHTML = newStatus;
-    approveBooking();
-}
 
-function updateStatusApproved(newStatus){
-    tableStatus[i].innerHTML = newStatus;
-}
-
-/* Add approve booking button to pending bookings*/
-function approveBooking(){
-    let approveButton = document.getElementsByClassName("approve-booking");
-    approveButton[i].classList.add("reveal");
-}
 
 
