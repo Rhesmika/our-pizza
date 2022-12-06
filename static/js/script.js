@@ -9,35 +9,35 @@ window.addEventListener("scroll", () => {
     }
 })
 
-// // /* Slogan */
-// const slogan = document.querySelector("#slogan-text");
-// const strSlogan = slogan.textContent;
-// const splitSlogan = strSlogan.split("");
-// slogan.textContent = "";
-// for (let i=0; i < splitSlogan.length; i++){
-//     slogan.innerHTML += "<span>" + splitSlogan[i] +"</span>";
-// }
 
-// let character =0;
-// let timer = setInterval(onTick, 50);
+/* Slogan */
+const slogan = document.querySelector("#slogan-text");
+const strSlogan = slogan.textContent;
+const splitSlogan = strSlogan.split("");
+slogan.textContent = "";
+for (let i=0; i < splitSlogan.length; i++){
+    slogan.innerHTML += "<span>" + splitSlogan[i] +"</span>";
+}
 
-// function onTick(){
-//     const span = slogan.querySelectorAll("span")[character]
-//     span.classList.add("reveal");
-//     character++;
-//     if (character === splitSlogan.length) {
-//         complete();
-//         return;
-//     }
-// }
+let character =0;
+let timer = setInterval(onTick, 50);
 
-// function complete(){
-//     clearInterval(timer);
-//     timer = null;
-// }
+function onTick(){
+    const span = slogan.querySelectorAll("span")[character]
+    span.classList.add("reveal");
+    character++;
+    if (character === splitSlogan.length) {
+        complete();
+        return;
+    }
+}
 
+function complete(){
+    clearInterval(timer);
+    timer = null;
+}
 
-/* Booking Status Converter */
+/* Admin Booking Table Status Converter */
 
 var tableStatus = document.getElementsByClassName('booking-status');
 
