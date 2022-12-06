@@ -11,7 +11,6 @@ window.addEventListener("scroll", () => {
 
 
 /* Slogan */
-
 if(window.location.pathname == '/') {
     const slogan = document.querySelector("#slogan-text");
 const strSlogan = slogan.textContent;
@@ -43,7 +42,6 @@ function complete(){
 
 
 /* Admin Booking Table Status Converter */
-
 if(window.location.pathname == '/bookings/admin-all') {
     var tableStatus = document.getElementsByClassName('booking-status');
 
@@ -68,15 +66,8 @@ if(window.location.pathname == '/bookings/admin-all') {
     }
 
     /* Add approve booking button to pending bookings*/
-
     function approveBooking(){
         let approveButton = document.getElementsByClassName("approve-booking");
         approveButton[i].classList.add("reveal");
     }
-
-    
 }
-
-
-
-

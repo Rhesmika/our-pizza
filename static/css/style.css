@@ -224,6 +224,7 @@ span.reveal{
     color: white;
     padding: 10px;
     font-size: smaller;
+    margin-bottom: 10px;
 }
 
 .booking-button a{
@@ -308,13 +309,36 @@ footer{
     width:100%;;
     height: 50px;
     background-color:#15668a;
+    font-size: smaller;
+    text-align: center;
+
 }
+
+
+#portal{
+    color: white;
+    font-size: 10px;
+    padding-top: 5px;
+    margin-bottom: 0rem; 
+}
+#portal a{
+    color: white;
+}
+
+
+#portal:hover{
+    text-decoration: underline;
+}
+
 
 #reserves{
     color: white;
-    text-align: center;
-    padding-top: 15px;
+    margin-bottom: 0rem; 
 }
+
+
+}
+
 
 /*Media Queries*/
 
