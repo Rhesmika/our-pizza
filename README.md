@@ -88,7 +88,74 @@ The Javascript was run through the PJ Hint Validator. 15 warnings appeared all r
 When initially run through the lighthouse report, the images for mobile were too large. Smaller image version were then implimented for smaller screen sizes.  These were amended and scores are now positive.
 ![lighthouse](static/images/readme/lighthouse.png)
 
+### Manual Testing 
+New Account: 
+Expected: As a user, I want to register to the website to have access to bookings
+Test: Register a new account without a password, without a name, with incorrect matching passwords
+Outcome: user si redirected to register page and all options are still available to be filled in
+
+Login:
+Expected: As a user i ecxpect to be able to log in to have acess to bookings
+Test: log in as user
+Outcome: log in was sucessful, directed to the bookings page
+
+Logout :
+Expected: As a user i expect to be able to logout from the website
+Test: log out from website 
+Outcome: direct to a 'are you sure page and once confirmed, redirected to the homepage and can no longer see bookings. 
+
+View bookings: 
+Expected: as a logged in user and amin, I expect to see my requested bookings
+Test: create bookings as a user, approve some as superuser and review as user. 
+Outcome: Bokings are found on correct pages, Approved on one page, pending bookings are on the pending page
+
+Create Bookings:
+Expected: As a logged in user and admin, I expect to make create a booking with referece, date, time and party.
+Test: all / individual fields left empty. 
+Outcome: form does not submit without all fields being completed. 
+
+Edit Booking:
+Expected: As a logged in user, I expect to edit all fields of my booking and the booking to revert to pending
+Test: incomplete all / individual field left empty
+Outcome: form does not submit without all fields being completed.  Completed edit booking is then seen on pending page.
+
+Delete Bookings:
+Expected: As a logged in user and admin, I expect to delete a speicific booking
+Test: Select the delete button and confirm deletion
+Outcome: Booking is no longer seen on user view or on back end 
+
+Edit Booking - Admin:
+Expected: As a logged in admin, I expect to edit all fields of my booking and the booking remain at the same booking status
+Test: edit both pending and approved bookings
+Outcome: Both types of bookings remaing their status
+
+Admin portal Access:
+Expected: As the admin, i expect to be the only one who can see the admin portal
+Test: request access to admin portal as anothe user and as someone not logged in at all
+Outcome: direct to the bookings page if logged in, or the log in page if not logged in. 
+
+Admin Portal View:
+Expected: As the admin, I expect to view all upcoming bookings from all users
+Test: create bookings from other users
+Outcome: bookings appear in the table
+
+Approve Booking button:
+Expected: As the admin, I expect to see the approve button if a booking is pending
+Test: create a user booking which automates to pending
+Outcome: Button appears
+
+Approve Booking:
+Expected: As the admin, I expect when i click the approve button, the booking status is updated to approved and the approve button is removed
+Test: click approve button 
+Outcome: booking is updated as approved and the button disapears
+
 ## Deployment
+ The site was deployed to Heroku. The steps to deploy are as follows: 
+
+
+
+
+The live link can be found here - https://our-pizza.herokuapp.com/
 
 # Credits
 
