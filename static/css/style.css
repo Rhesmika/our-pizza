@@ -77,7 +77,7 @@ color: inherit;
 #hero-image{
     width: 100%;
     height: 400px;
-    background: url('../images/our-pizza-hero-image.jpg') no-repeat center center;
+    background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670406925/static/images/our-pizza-hero-image_cyp3da.jpg') no-repeat center center;
     background-size: 100%;
 }
 
@@ -122,12 +122,12 @@ span.reveal{
 }
 
 #intro-img-left{
-    background: url('../images/our-pizza-pepper.png') no-repeat center center;
+    background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670408868/static/images/our-pizza-pepper_zkpf9c.png') no-repeat center center;
     background-size: 100%;
 }
 
 #intro-img-right{
-    background: url('../images/our-pizza-tomato.png') no-repeat center center;
+    background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670408869/static/images/our-pizza-tomato_eslf9e.png') no-repeat center center;
     background-size: 100%;
 }
 
@@ -149,15 +149,15 @@ span.reveal{
 }
  
 #gallery-1{
-    background: url(../images/our-pizza-dough.jpg) center center no-repeat;
+    background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670407626/static/images/our-pizza-dough_amggtb.jpg') center center no-repeat;
     background-size: 100%;
 }
 #gallery-2{
-    background: url(../images/our-pizza-oven.jpg) center center no-repeat;
+    background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670407626/static/images/our-pizza-oven_nutx90.jpg') center center no-repeat;
     background-size: 100%;
 }
 #gallery-3{
-    background: url(../images/our-pizza-resturant.jpg) center center no-repeat;
+    background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670407626/static/images/our-pizza-resturant_ij4pbm.jpg') center center no-repeat;
     background-size: 100%;
 }
 
@@ -365,19 +365,19 @@ footer{
         padding-top: 10px;
     }
     #hero-image{
-        background: url('../images/our-pizza-hero-image-min.jpg') no-repeat center center;
+        background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670407669/static/images/our-pizza-hero-image-min_ypy2up.jpg') no-repeat center center;
         background-size: 100%;
     }
     #gallery-1{
-        background: url('../images/our-pizza-dough-min.jpg') center center no-repeat;
+        background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670407670/static/images/our-pizza-dough-min_mc6qn2.jpg') center center no-repeat;
         background-size: 100%;
     }
     #gallery-2{
-        background: url('../images/our-pizza-oven-min.jpg') center center no-repeat;
+        background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670407668/static/images/our-pizza-oven-min_ujfput.jpg') center center no-repeat;
         background-size: 100%;
     }
     #gallery-3{
-        background: url('../images/our-pizza-resturant-min.jpg') center center no-repeat;
+        background: url('https://res.cloudinary.com/dmg2ncvzm/image/upload/v1670407669/static/images/our-pizza-resturant-min_ksb08h.jpg') center center no-repeat;
         background-size: 100%;
     }
 }
