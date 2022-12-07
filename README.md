@@ -66,8 +66,27 @@ If the admin decides to update the booking, the booking remains as its bookings 
 - Option for customers to leave reviews / rank their experience. 
 
 ## Testing
+
+The website and all links/ features have been tested on both mobile and laptop. On laptop, the browser was Chrome, on movile, the browser was Safari.
+Media queries created were suitable for each screen size and didn't negatively affect the ratio of images etc. 
+
+### HTML:
+The wesbites pages were run through the W3C Validator. Minor errors were picked up and and corrected simply. Now shows no errors.
+![html-validator](static/images/readme/HTML%20validator.png)
+
+### CSS:
+The created CSS was run through the Jigsaw CSS Validator. Minor errors were picked up and and corrected simply.Now shows no errors. 
+![css-validator](static/images/readme/css%20validator%20.png)
+
+
+### Javascript:
+The Javascript was run through the PJ Hint Validator. 15 warnings appeared all related to irrelevant features.
+![js-validator](static/images/readme/JS%20Validator.png)
+
+
 ### Lighthouse
-### Validator Testing
+When initially run through the lighthouse report, the images for mobile were too large. Smaller image version were then implimented for smaller screen sizes.  These were amended and scores are now positive.
+![lighthouse](static/images/readme/lighthouse.png)
 
 ## Deployment
 
