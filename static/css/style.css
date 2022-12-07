@@ -184,7 +184,7 @@ span.reveal{
   
   .scroll-to-top.active {
     bottom:60px;
-    pointer-events: auto;
+    pointer-events:all;
     opacity:1;
   }
 
@@ -338,8 +338,6 @@ footer{
 }
 
 
-}
-
 
 /*Media Queries*/
 
@@ -411,6 +409,3 @@ footer{
         line-height: 15px;
     }
 }
-
-
-

@@ -7,7 +7,7 @@ window.addEventListener("scroll", () => {
     } else {
         toTop.classList.remove("active");
     }
-})
+});
 
 
 /* Slogan */
@@ -24,7 +24,7 @@ let character =0;
 let timer = setInterval(onTick, 50);
 
 function onTick(){
-    const span = slogan.querySelectorAll("span")[character]
+    const span = slogan.querySelectorAll("span")[character];
     span.classList.add("reveal");
     character++;
     if (character === splitSlogan.length) {
