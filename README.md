@@ -152,10 +152,41 @@ Outcome: booking is updated as approved and the button disapears
 ## Deployment
  The site was deployed to Heroku. The steps to deploy are as follows: 
 
-
+- Create Heroku App
+- Link the Github repositary and connect to main
+- Add the Postgres
+- Add config Vars: CLoudinary, Secret Key & Elephant SQL
+- Add these values to the env.py file in Github Repositary
+- Update Repositary Settings file 
+- Deploy app in Heroku
 
 
 The live link can be found here - https://our-pizza.herokuapp.com/
 
+# Issues
+My major issue came when I was deploying the final app. All the HTMl content carried over along with the Javascript, however the CSS and images weren't visible. 
+With help from Tutor assistance it was noted that as the css and images were in the cloudinary api, django didn't transfer them over correctly. After manually runnning collect static, this then created version issues and no images were holding the right URL. 
+To resolve this, all images were re-uploaded directly to the cloudinary and the URL for each cloudinary image was then pasted into the css where relevant. 
+
 # Credits
 
+Scroll Tutorial: 
+https://www.youtube.com/watch?v=SJVCvnKM_lI&t=396s
+
+Icons: 
+Tomato = https://www.flaticon.com/free-icon/tomato_819856?term=tomato&page=1&position=6&page=1&position=6&related_id=819856&origin=search
+Pepper = https://www.flaticon.com/free-icon/bell-pepper_883661?term=pepper&page=1&position=49&page=1&position=49&related_id=883661&origin=search
+
+Limit view to superuser:
+https://stackoverflow.com/questions/15998140/how-to-limit-a-view-to-superuser-only
+
+Tutor Assistance pointed me in the direction of this page / Website
+https://ccbv.co.uk/projects/Django/1.9/django.contrib.auth.mixins/UserPassesTestMixin/#handle_no_permission
+
+Hero Image: 
+https://unsplash.com/photos/frTrM7Gdkho
+
+Gallery Images:
+Dough = https://unsplash.com/photos/h8cHw0Zv5GI
+Oven = https://unsplash.com/photos/e8ULlZbWu0I
+Resturant = https://unsplash.com/photos/ogtpG5pCwrE
