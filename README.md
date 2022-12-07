@@ -13,6 +13,8 @@ The website also needed to show new customers what Our Pizza is and what makes i
 ![am-i-responsive](static/images/readme/amiresponsive-ourpizza.png)
 
 ## Design
+The design of the wesbite needed to be uncomplicated but bold. This was reflected in the font and colour choices.  The actual design was created in Adobe Illustrator. 
+
 ### Mock up 
 ### Design Edits
 
