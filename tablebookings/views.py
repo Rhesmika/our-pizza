@@ -5,21 +5,24 @@ from datetime import datetime
 from .forms import NewBookingForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.models import User
-from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin, AccessMixin
+from django.contrib.auth.mixins import UserPassesTestMixin,\
+     LoginRequiredMixin, AccessMixin
 
 
 # User Views
 class UpcomingBookingsApproved(LoginRequiredMixin, generic.ListView):
     model = Booking
     today = datetime.today()
-    queryset = Booking.objects.filter(booking_date__gte=today, status=1).order_by("booking_date")
+    queryset = Booking.objects.filter(booking_date__gte=today, status=1)\
+        .order_by("booking_date")
     template_name = 'bookings.html'
 
 
 class UpcomingBookingsPending(LoginRequiredMixin, generic.ListView):
     model = Booking
     today = datetime.today()
-    queryset = Booking.objects.filter(booking_date__gte=today, status=0).order_by("booking_date")
+    queryset = Booking.objects.filter(booking_date__gte=today, status=0).\
+        order_by("booking_date")
     template_name = 'bookings_pending.html'
 
 
@@ -56,7 +59,8 @@ class DeleteBooking(LoginRequiredMixin, DeleteView):
 
 
 # Superuser Test
-class SuperuserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin, AccessMixin):
+class SuperuserRequiredMixin(LoginRequiredMixin,
+                             UserPassesTestMixin, AccessMixin):
 
     def test_func(self):
         return self.request.user.is_superuser
@@ -72,7 +76,8 @@ class SuperuserRequiredMixin(LoginRequiredMixin, UserPassesTestMixin, AccessMixi
 class AllUpcomingBookings(SuperuserRequiredMixin, generic.ListView):
     model = Booking
     today = datetime.today()
-    queryset = Booking.objects.filter(booking_date__gte=today).order_by("booking_date")
+    queryset = Booking.objects.filter(booking_date__gte=today)\
+        .order_by("booking_date")
     template_name = 'bookings_admin.html'
 
 

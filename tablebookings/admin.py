@@ -5,8 +5,10 @@ from .models import Booking
 
 @admin.register(Booking)
 class bookingAdmin(ModelAdmin):
-    list_display = ('author', 'reference', 'booking_date', 'party_of', 'status')
-    search_fields = ('author', 'reference', 'booking_date', 'party_of', 'status')
+    list_display = ('author', 'reference', 'booking_date',
+                    'party_of', 'status')
+    search_fields = ('author', 'reference', 'booking_date',
+                     'party_of', 'status')
     actions = ['pend_booking', 'approve_booking', 'deny_booking']
 
     def pend_booking(self, request, queryset):
